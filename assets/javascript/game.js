@@ -8,6 +8,13 @@ var startGame = function(){
 
     $("#crystals").empty();
 
+var images = [
+    'https://i.imgur.com/lhkq4cK.png',
+    'https://ih1.redbubble.net/image.525148917.0642/flat,1000x1000,075,f.u3.jpg',
+    'https://ih1.redbubble.net/image.524643622.6476/flat,550x550,075,f.u3.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQM-y34rL877z0kCvKZt24aFqSSXABPF5Vm3Z0ALfaoao8nnbvw'
+]    
+
 randomNumber = Math.floor(Math.random() * 102) + 19;
 // console.log(randomNumber)
 $("#random").html("Random Number: " + randomNumber);
@@ -23,10 +30,13 @@ for(i = 0; i < 4; i++){
         crystal.attr({
             "class": "crystal-images",
             "data-random": random,
-            
-            
+            // "id": "crystal"+i,
         });
-        crystal.html(random);
+        crystal.css({
+            "background-image": "url('" + images[i] + "')",
+            "background-size": "cover",
+        })
+        // crystal.html(random);
     $("#crystals").append(crystal);
     
               
@@ -35,7 +45,7 @@ for(i = 0; i < 4; i++){
 startGame();
 
 $(document).on('click', ".crystal-images", function (){
-        // console.log($(this).attr("data-random"));
+        console.log($(this).attr("id"));
 
     var num = parseInt($(this).attr("data-random"));
     totalScore += num;
