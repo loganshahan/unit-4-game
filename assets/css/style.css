@@ -5,30 +5,37 @@ body{
 }
 #title{
     background: yellow;
-    margin-top: 5%;
     width: 15%;
-    height: 40%;
     padding: 2%;
-    font-size: 20px;
+    font-size: 18px;
 }
 #instructions{
     background: skyblue;
     width: 30%;
-    padding: 5%;
+    padding: 2%;
+    font-size: 18px;
 }
 #score{
     background: pink;
     width: 40%;
     padding: 5%;
+    font-size: 18px;
 }
 #counter{
     float: right;
 }
 #crystals{
     background: white;
+    width: 50%;
+    float: left;
 }
 #total-score{
     background: limegreen;
     padding: 5%;
     width: 20%;
+    font-size: 18px;
+}
+.crystal-images{
+    width: 100px;
+    height: 100px;
 }
